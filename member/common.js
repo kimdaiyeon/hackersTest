@@ -184,7 +184,7 @@ function memberupdate_check(usepage){
             mailinfo:mailinfo
             };
             $.ajax({
-                url:"/member/memberupdate.php",
+                url:"/member/back/index.php?mode=update",
                 type:"POST",
                 data: paramdate,
                 success:function(data){

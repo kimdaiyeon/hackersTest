@@ -3,10 +3,9 @@ include_once $_SERVER['DOCUMENT_ROOT']."/DBconfig.php";
 session_start();
 
 include $_SERVER['DOCUMENT_ROOT']."/include/header.php";
-$mode = $_SERVER['DOCUMENT_ROOT']."/admin/view/".$_GET['mode'].".php";
+$mode = $_SERVER['DOCUMENT_ROOT']."/lecture_board/view/".$_GET['mode'].".php";
 if(!file_exists($mode)){
-	//include $_SERVER['DOCUMENT_ROOT']."/index.html";
-	include $_SERVER['DOCUMENT_ROOT']."/admin/view/list.php";
+	include $_SERVER['DOCUMENT_ROOT']."/index.html";
 }else{
 	include	$mode;
 }

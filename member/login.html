@@ -31,26 +31,6 @@
 <script type="text/javascript" src="http://q.hackershrd.com/worksheet/js/plugins/bxslider/jquery.bxslider.min.js"></script>
 <script type="text/javascript" src="http://q.hackershrd.com/worksheet/js/plugins/bxslider/bxslider.js"></script>
 <script type="text/javascript" src="http://q.hackershrd.com/worksheet/js/ui.js"></script>
-
-<script>
-	$(document).ready(function(){
-		var link = document.location.href;
-		$("#currentURL").val(link);
-	});
-	function checkLogin(){
-		if(loginInfo.id.value== ""){
-			alert("아이디를 입력해 주세요.");
-			loginInfo.id.focus();
-			return false;
-		}else if (loginInfo.pw.value == ""){
-			alert("비밀번호를 입력해주세요.");
-			loginInfo.pw.focus();
-			return false;
-		}else{
-			return true;
-		}
-	}
-</script>
 <!--[if lte IE 9]> <script src="/js/common/place_holder.js"></script> <![endif]-->
 
 </head><body>
@@ -59,7 +39,7 @@
 	<div class="login-inner">
 		<h1><a href="/"><img src="http://img.hackershrd.com/common/logo.png" alt="해커스 HRD LOGO" width="142" height="31"/></a></h1>
 		<div class="box-login">
-			<form action="/member/login.php" method="post" name="loginInfo" onsubmit="return checkLogin();">
+			<form action="/member/back/index.php?mode=login" method="post" name="loginInfo" onsubmit="return checkLogin();">
 				<input type="hidden" value="<?=$prevPage?>" name="preURL"> 
 				<div class="login-input">
 					<div class="input-text-box">
@@ -114,3 +94,22 @@
 </div>
 </body>
 </html>
+<script>
+		$(document).ready(function(){
+			var link = document.location.href;
+			$("#currentURL").val(link);
+		});
+		function checkLogin(){
+			if(loginInfo.id.value== ""){
+				alert("아이디를 입력해 주세요.");
+				loginInfo.id.focus();
+				return false;
+			}else if (loginInfo.pw.value == ""){
+				alert("비밀번호를 입력해주세요.");
+				loginInfo.pw.focus();
+				return false;
+			}else{
+				return true;
+			}
+		}
+	</script>

@@ -66,7 +66,7 @@
 				<td><?=$row['lec_no'] ?></td>
 				<td><?=$row['lec_type'] ?></td>
 				<td>
-					<a href="/admin/view/lecDetail.php?&lecNo=<?=$row['lec_no']?>">
+					<a href="/admin/index.php?mode=detail&lecNo=<?=$row['lec_no']?>">
 						<span class="tc-gray ellipsis_line"><?=$row['lec_name'] ?></span>
 						<strong class="ellipsis_line"><?=$row['lec_teacher'] ?></strong>
 					</a>
